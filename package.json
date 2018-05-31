@@ -1,0 +1,15 @@
+{
+  "name": "testdocx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docx": "git+https://github.com/Favana/docx.git",
+    "fs": "0.0.1-security"
+  }
+}
