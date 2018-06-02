@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var Docx_1 = require("../docx/classes/Docx");
+var docx_officegen_1 = require("docx-officegen");
 var data = [
     { x: 1, y: 0, value: 'سال و استان', mergeRow: '', mergeCol: '5', style: { align: 'center', fontFamily: 'B Nazanin', bold: 'true', border: { top: '17', bottom: '17', left: '17' } } },
     { x: 1, y: 1, value: '', mergeRow: '', mergeCol: '' },
@@ -445,15 +445,16 @@ var data = [
     { x: 40, y: 10, value: '', mergeRow: '', mergeCol: '' },
 ];
 var fileName = 'test.docx';
-var fileDir = 'OutPut/';
-var filePath = fileDir + fileName;
-var docx = new Docx_1.Docx(fileName, fileDir);
+var filePath = 'outFile/';
+var docx = new docx_officegen_1.Docx(fileName, filePath);
 docx.createTable(data);
+docx.createP();
+docx.addContentP("این فایل تست است .", { fontSize: 10 });
 var out = docx.generate();
 if (out == false) {
-    console.log("Don't Create File of docx");
+    console.log("Don't Create File");
 }
 else {
-    console.log('Create File in Directory');
+    console.log('create File');
 }
 //# sourceMappingURL=index.js.map

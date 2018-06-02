@@ -1,5 +1,5 @@
-import {Docx} from '../docx/classes/Docx';
-import{readdir} from 'fs';
+import {Docx} from 'docx-officegen';
+
 
 
 let data = [
@@ -562,21 +562,24 @@ let data = [
     { x: 40, y: 8, value: '2729', mergeRow: '', mergeCol: '3', style: { align: 'right', fontFamily: 'B Nazanin', border: { bottom: "18" } } },
     { x: 40, y: 9, value: '', mergeRow: '', mergeCol: '' },
     { x: 40, y: 10, value: '', mergeRow: '', mergeCol: '' },
+    ];
+let fileName ='test.docx';
+let filePath = 'outFile/';
 
-
-]//  data
-
-let fileName = 'test.docx';
-let fileDir = 'OutPut/';
-let filePath = fileDir+fileName;
-
-let docx = new Docx(fileName, fileDir);
+let docx = new Docx(fileName,filePath);
 docx.createTable(data);
+docx.createP();
+docx.addContentP("این فایل تست است ." ,{fontSize: 10});
 let out = docx.generate();
 
     if(out == false){
-        console.log("Don't Create File of docx");
+        console.log("Don't Create File");
     }else{
-       console.log('Create File in Directory');
+        console.log('create File');
     }
+
+
+
+
+
 

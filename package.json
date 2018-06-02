@@ -1,5 +1,5 @@
 {
-  "name": "testdocx",
+  "name": "testdevofficegen",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "docx": "git+https://github.com/Favana/docx.git",
-    "fs": "0.0.1-security"
+    "docx-officegen": "^1.0.19"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.0"
   }
 }
